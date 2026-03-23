@@ -46,7 +46,7 @@ jobs:
           sudo apt-mark hold snapd
 
       - name: Download source tarball
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: linux-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -54,7 +54,7 @@ jobs:
           run-id: 18000784440
 
       - name: Download out directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -62,7 +62,7 @@ jobs:
           run-id: 18000784440
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: linux-patch-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -161,13 +161,13 @@ jobs:
           ls -lsh out/release
 
       - name: Upload DEB packages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: packages-linux-kingdom-deb-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src/chromium-${{ env.VERSION }}/out/release/*.deb
 
       - name: Upload RPM packages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: packages-linux-kingdom-rpm-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src/chromium-${{ env.VERSION }}/out/release/*.rpm
@@ -179,7 +179,7 @@ jobs:
           ZSTD_CLEVEL=12 tar -I zstd -cvpf /home/runner/work/laddu/laddu/chromium-src/out.tar.zst ./out
 
       - name: Upload out directory
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src/out.tar.zst

@@ -58,7 +58,7 @@ jobs:
           pwd
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: windows-src-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src\*.tar.xz
@@ -86,7 +86,7 @@ jobs:
           ls -lsh && pwd
 
       - name: Upload windows patch
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: windows-patch-${{ env.VERSION }}
           path: ${{ github.workspace }}\*.patch
@@ -102,13 +102,13 @@ jobs:
       MSYS: winsymlinks:native
     steps:
       - name: Download source tarball
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-src-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-patch-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
@@ -200,7 +200,7 @@ jobs:
           ZSTD_CLEVEL=12 tar -I zstd --force-local -cvpf D:/a/laddu/laddu/chromium-src/out.tar.zst ./out
 
       - name: Upload out directory
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src\out.tar.zst
@@ -216,19 +216,19 @@ jobs:
         MSYS: winsymlinks:native
       steps:
       - name: Download source tarball
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-src-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-patch-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
@@ -318,7 +318,7 @@ jobs:
           ZSTD_CLEVEL=12 tar -I zstd --force-local -cvpf D:/a/laddu/laddu/chromium-src/out.tar.zst ./out
 
       - name: Upload out directory
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src\out.tar.zst
@@ -335,19 +335,19 @@ jobs:
         MSYS: winsymlinks:native
       steps:
       - name: Download source tarball
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-src-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-patch-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
@@ -426,7 +426,7 @@ jobs:
           ZSTD_CLEVEL=12 tar -I zstd --force-local -cvpf D:/a/laddu/laddu/chromium-src/out.tar.zst ./out
 
       - name: Upload out directory
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src\out.tar.zst
@@ -443,19 +443,19 @@ jobs:
         MSYS: winsymlinks:native
       steps:
       - name: Download source tarball
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-src-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-patch-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
@@ -534,7 +534,7 @@ jobs:
           ZSTD_CLEVEL=12 tar -I zstd --force-local -cvpf D:/a/laddu/laddu/chromium-src/out.tar.zst ./out
 
       - name: Upload out directory
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src\out.tar.zst
@@ -551,19 +551,19 @@ jobs:
         MSYS: winsymlinks:native
       steps:
       - name: Download source tarball
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-src-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: windows-patch-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
@@ -655,7 +655,7 @@ jobs:
           ls out/release
 
       - name: Upload windows packages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: packages-windows-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src\chromium-${{ env.VERSION }}\out\release\*.exe
@@ -667,7 +667,7 @@ jobs:
           ZSTD_CLEVEL=12 tar -I zstd --force-local -cvpf D:/a/laddu/laddu/chromium-src/out.tar.zst ./out
 
       - name: Upload out directory
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src\out.tar.zst

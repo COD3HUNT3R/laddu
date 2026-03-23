@@ -61,7 +61,7 @@ jobs:
           ZSTD_CLEVEL=12 tar -I zstd -cvpf /home/runner/work/laddu/laddu/aosp.tar.zst ./aosp-src
 
       - name: Upload aosp src
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: aosp-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src/aosp.tar.zst

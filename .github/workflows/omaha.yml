@@ -32,7 +32,7 @@ jobs:
           hammer --all --mode=all
 
       - name: Upload windows packages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: packages-windows-${{ env.VERSION }}
           path: ${{ github.workspace }}\omaha-src\omaha-${{ env.VERSION }}\out\release\*.exe
@@ -44,7 +44,7 @@ jobs:
           ZSTD_CLEVEL=12 tar -I zstd --force-local -cvpf D:/a/laddu/laddu/omaha-src/out.tar.zst ./out
 
       - name: Upload out directory
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\omaha-src\out.tar.zst
