@@ -167,13 +167,13 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-patch-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -285,19 +285,19 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-patch-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -420,19 +420,19 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-patch-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -543,19 +543,19 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-patch-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -660,19 +660,19 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-patch-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -777,19 +777,19 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: android-patch-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src

@@ -11,8 +11,8 @@ jobs:
   quicklinux:
       runs-on: ubuntu-latest
       env:
-        VMAJOR: 140
-        VERSION: 140.0.7339.207
+        VMAJOR: 146
+        VERSION: 146.0.7680.164
         SRCDIR: chromium-src
       steps:
       - name: Maximize build space
@@ -46,7 +46,7 @@ jobs:
           sudo apt-mark hold snapd
 
       - name: Download source tarball
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: linux-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -54,7 +54,7 @@ jobs:
           run-id: 18000784440
 
       - name: Download out directory
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -62,7 +62,7 @@ jobs:
           run-id: 18000784440
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: linux-patch-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
