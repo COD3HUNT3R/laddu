@@ -134,7 +134,7 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: linux-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -229,13 +229,13 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: linux-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -332,13 +332,13 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: linux-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -424,13 +424,13 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: linux-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
@@ -522,13 +522,13 @@ jobs:
           sudo docker builder prune -a
 
       - name: Download source tarball
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: linux-src-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src
 
       - name: Download out directory
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: chromium-out-${{ env.VERSION }}
           path: /home/runner/work/laddu/laddu/chromium-src

@@ -18,7 +18,7 @@ jobs:
         MSYS: winsymlinks:native
       steps:
       - name: Download source tarball
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: windows-src-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
@@ -26,7 +26,7 @@ jobs:
           run-id: 17165507192
 
       - name: Download out directory
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: chromium-out-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
@@ -34,7 +34,7 @@ jobs:
           run-id: 17165507192
 
       - name: Download versioned branding patches
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: windows-patch-${{ env.VERSION }}
           path: ${{ github.workspace }}\chromium-src
